@@ -342,7 +342,7 @@ function requestVideo(q, r, link) {
         //playlistId: playlistId,
         maxResults: 1,
         type: 'video',
-        key: "AIzaSyA9wOhieB8Tk7giEZRnHrGTSnAXlL6NiUE"
+        key: "" // <- insert your API Key here
     };
 
     $.get("https://www.googleapis.com/youtube/v3/search",options,

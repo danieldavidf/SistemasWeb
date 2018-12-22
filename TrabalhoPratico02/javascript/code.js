@@ -252,7 +252,7 @@ function requestVideo(q, link) {
         //playlistId: playlistId,
         maxResults: 1,
         type: 'video',
-        key: "AIzaSyA9wOhieB8Tk7giEZRnHrGTSnAXlL6NiUE"
+        key: "" // <- insert your API Key here
     };
 
     $.get("https://www.googleapis.com/youtube/v3/search",options,
@@ -485,7 +485,7 @@ function displayResultE(estado) {
 }
 
 function facebookApi(textoBusca) {
-    var token="342008343285075|I_qQvvG4un6CCEszGN7gkuGixi8";
+    var token=""; // <- insert your token here
     $.ajax({
         type: "GET",
         dataType: "json",
