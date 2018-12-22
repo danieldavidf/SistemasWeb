@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Trabalho prático 2</title>
+    <link rel="shortcut icon" href="imagens/aviao.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="javascript/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="javascript/code.js"></script>
+    <script type="text/javascript" src="javascript/Chart.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>-->
+
+</head>
+
+<body>
+	<form id="formulario" autocomplete="off">
+		<fieldset>
+			<legend>Turismo no Brasil 2013 a 2017</legend>
+			
+			<select id="pais">
+				<option value="0">Todos os países</option> <option value="1">África do Sul</option> <option value="2">Alemanha</option> <option value="3">Angola</option> <option value="4">Argentina</option> <option value="5">Arábia Saudita</option> <option value="6">Austrália</option> <option value="7">Áustria</option> <option value="8">Bangladesh</option> <option value="9">Bolívia</option> <option value="10">Bulgária</option> <option value="11">Bélgica</option> <option value="12">Cabo Verde</option> <option value="13">Canadá</option> <option value="14">Chile</option> <option value="15">China</option> <option value="16">China, Hong Kong</option> <option value="17">Cingapura</option> <option value="18">Colômbia</option> <option value="19">Costa Rica</option> <option value="20">Croácia</option> <option value="21">Cuba</option> <option value="22">Dinamarca</option> <option value="23">Egito</option> <option value="24">El Salvador</option> <option value="25">Equador</option> <option value="26">Eslováquia</option> <option value="27">Eslovênia</option> <option value="28">Espanha</option> <option value="29">Estados Unidos</option> <option value="30">Estônia</option> <option value="31">Filipinas</option> <option value="32">Finlândia</option> <option value="33">França</option> <option value="34">Gana</option> <option value="35">Grécia</option> <option value="36">Guatemala</option> <option value="37">Guiana</option> <option value="38">Guiana Francesa</option> <option value="39">Haiti</option> <option value="40">Holanda</option> <option value="41">Honduras</option> <option value="42">Hungria</option> <option value="43">Índia</option> <option value="44">Indonésia</option> <option value="45">Irlanda</option> <option value="46">Irã</option> <option value="47">Israel</option> <option value="48">Itália</option> <option value="49">Japão</option> <option value="50">Letônia</option> <option value="51">Lituânia</option> <option value="52">Luxemburgo</option> <option value="53">Líbano</option> <option value="54">Malásia</option> <option value="55">Marrocos</option> <option value="56">Moçambique</option> <option value="57">México</option> <option value="58">Nicarágua</option> <option value="59">Nigéria</option> <option value="60">Noruega</option> <option value="61">Nova Zelândia</option> <option value="62">Outros países</option> <option value="63">Panamá</option> <option value="64">Paquistão</option> <option value="65">Paraguai</option> <option value="66">Países não especificados</option> <option value="67">Peru</option> <option value="68">Polônia</option> <option value="69">Portugal</option> <option value="70">Quênia</option> <option value="71">Reino Unido</option> <option value="72">República Dominicana</option> <option value="73">República Tcheca</option> <option value="74">República da Coreia</option> <option value="75">Romênia</option> <option value="76">Rússia</option> <option value="77">Suriname</option> <option value="78">Suécia</option> <option value="79">Suíça</option> <option value="80">Sérvia</option> <option value="81">Síria</option> <option value="82">Tailândia</option> <option value="83">Taiwan</option> <option value="84">Trinidad e Tobago</option> <option value="85">Tunísia</option> <option value="86">Turquia</option> <option value="87">Ucrânia</option> <option value="88">Uruguai</option> <option value="89">Venezuela</option>
+			</select>
+
+			<input id="ano" placeholder=" Todos os anos" maxlength="4" value="" type="text" onkeypress='return SomenteNumero(event)'><br>
+			<!--<input id="estados" type="text" value="" placeholder=" Estados"><br>-->
+			<select id="estado">
+				<option value="0">Todos os Estado</option>
+				<option value="1">Acre</option> <option value="2">Amapá</option>
+				<option value="3">Amazonas</option> <option value="4">Bahia</option>
+				<option value="5">Ceará</option> <option value="6">Distrito Federal</option>
+				<option value="7">Mato Grosso do Sul</option> <option value="8">Minas Gerais</option>
+				<option value="9">Pará</option>	<option value="10">Paraná</option>
+				<option value="11">Pernambuco</option> <option value="12">Rio de Janeiro</option>
+				<option value="13">Rio Grande do Norte</option>	<option value="14">Rio Grande do Sul</option>
+				<option value="15">Roraima</option>	<option value="16">Santa Catarina</option>
+				<option value="17">São Paulo</option> <option value="18">Outras Unidades da Federação</option>
+			</select><br>
+
+			<button id="btnEnviar" type="button" onclick="gerarGrafico();"> Filtrar</button>
+			<button id="btnLimpar" type="button" onclick="limparCampos();"> Limpar campos</button>
+		</fieldset>
+	</form>
+
+	<div id="grafico"></div> 
+	<div id="facebookApi"></div>
+	<br>
+	<div id="conteudovideo" >
+    	<iframe id="video-container" hidden></iframe>
+    </div>
+
+    <canvas id="pie-chart" width="800" height="450"></canvas>
+
+
+</body>
+</html>
+
+<!-- Animação para "descer" a tela para a resposta -->
+<script type="text/javascript">
+	$("#btnEnviar").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#resultadoBusca").offset().top
+		}, 3000);
+	});
+</script>
