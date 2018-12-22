@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+
+#espaco{
+    width: 600px;
+    margin: auto;
+}
+
+.carta{
+	width: 100%;
+	height: 100%;
+}
+
+td{
+	width: 100%;
+    height: 100%;
+}
+
+#tabuleiro td{
+    width: 150px;
+    height: 150px;
+    background: #99ccff;
+    background-image: url(imgs/fundo_carta.jpg);
+    background-repeat: no-repeat;
+    font-size: 80px;
+}
+

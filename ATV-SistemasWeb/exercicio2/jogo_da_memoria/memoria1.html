@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 - Daniel David</title>
+    <link rel="stylesheet" href="memoria2.css" />
+    <script src="memoria3.js"></script>
+</head>
+<body>
+    <div id="espaco">
+    <h1>Jogo da Memória</h1>
+    <table id="tabuleiro">
+        <script>gerarTabuleiro(12);</script>
+    </table>
+    
+    <table>
+        <tr>
+            <td>
+                <h3 id="pontuacao"></h3>
+            </td>
+            <td>
+                <input type='reset' name='btnAtualizar' value='Recomeçar' onClick='window.parent.location.reload();'>
+            </td>
+        </tr>
+    </table>  
+</body>
+<footer>
+    <p style="background-color: black; color: white; font-size: 22px; text-align: center;">MATC 82 – SISTEMAS WEB – Prof. Leandro Andrade </p>
+</footer>
+</html>

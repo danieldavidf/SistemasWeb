@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
+
+
+fieldset {
+    line-height: 30px;
+    text-align: center;
+    min-width: 175px;
+    background-color: #deb887;
+
+}
+
+table {
+    margin: auto;
+    width: 100%;
+}
+ 
+h2, legend {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+	text-align: justify;
+	font-size: 16px;
+}
+
+a {
+	font-size: 16px;
+}
+
+body {
+    font-size: .85em;
+    font-family: Muli;
+    background-color: #eead2d;
+}
+
+img {
+	width: 300px;
+	max-width: 100%;
+}
+
+#situacao {
+	font-size: 14px;
+	text-align: right;
+	font-weight: 600;
+	padding: 10px 0px 10px 0px;
+}
+
+#banner {
+	float: left;
+	width: 20%;
+}
+#corpo1 {
+	float: left;
+	width: 75%;
+	padding: 0px 0px 0px 10px;
+}
+
+#resultadoBusca {
+	background-color: #e6e3e3;
+	padding: 6px;
+}
+
+.cartaz {
+	display: table;
+}
+
+iframe {
+	width: 600px;
+	height:400px;
+}
+
+#boxTrailer {
+	display: table;
+}
+
+#infovideo {
+	padding: 15px 0px 10px 0px;
+	top: 1200px;
+	position: absolute;
+}
+
+#conteudovideo {
+	background-color: #e6e3e3;
+}
+
+#novostrailers {
+	background-color: #e6e3e3;
+	text-align: center;
+}
+
+#formulario select,#formulario input{
+	border: none;
+	padding: 8px;
+	border-radius: 5px;
+	margin: 5px;
+}
+#btnEnviar {
+	padding: 8px;
+	border: none;
+	background-color: #6eb343;
+	color: #FFF;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 5px;
+	transition: all 0.3s linear;
+	text-transform: uppercase;
+}
+
+#btnLimpar{
+	padding: 8px;
+	border: none;
+	background-color: #f51433;
+	color: #FFF;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 5px;
+	transition: all 0.3s linear;
+	text-transform: uppercase;
+}
+
+#btnEnviar:hover{
+	background: #399400;
+	transition: all 0.3s linear;
+}
+
+#btnLimpar:hover{
+	background: #ad0018;
+	transition: all 0.3s linear;
+}

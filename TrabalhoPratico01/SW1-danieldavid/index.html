@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Trabalho prático 1 - Daniel David & Thiago de Oliveira</title>
+    <link rel="shortcut icon" href="imagens/camera-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="javascript/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="javascript/code.js"></script>
+</head>
+
+<body>
+	<form id="formulario" autocomplete="off">
+		<fieldset>
+			<legend>Indique-me um filme</legend>
+			<h3>Quer assistir um filme e não sabe qual?</h3>
+			
+			<select id="categoria">
+				<option value="0">Escolher categoria:</option>	<option value="1">Ação</option>
+				<option value="2">Animação</option>				<option value="3">Aventura</option>
+				<option value="4">Comédia</option>				<option value="5">Clássico</option>
+				<option value="6">Documentário</option>			<option value="7">Drama</option>
+				<option value="8">Épico</option>				<option value="9">Faroeste</option>
+				<option value="10">Ficção</option>				<option value="11">Guerra</option>
+				<option value="12">Infantil</option>			<option value="13">Musical</option>
+				<option value="14">Policial</option>			<option value="15">Romance</option>
+				<option value="16">Suspense</option>			<option value="17">Terror</option>
+			</select>
+			<input id="ano" min="1909" placeholder=" Ano" max="2012" value="" type="number"><br>
+			<input id="atores" type="text" value="" placeholder=" Atores"><br>
+			<input id="infos" type="text" value="" placeholder=" Outras Informações"><br>
+	
+			<button id="btnEnviar" type="button" onclick="carregarPagina();"> Indicação</button>
+			<button id="btnLimpar" type="button" onclick="limparCampos();"> Limpar campos</button>
+			
+		</fieldset>
+	</form>
+
+	<a name="anchor"></a>
+	<div id="situacao"></div>
+
+	<div id="resultadoBusca"></div>
+
+    <div id="conteudovideo" align="center" >
+    	<iframe id="video-container" hidden></iframe>
+    </div>
+
+	<div id="novostrailers"></div>    
+
+</body>
+</html>
+
+<!-- Animação para "descer" a tela para a resposta -->
+<script type="text/javascript">
+	$("#btnEnviar").click(function() {
+		$('html, body').animate({
+			scrollTop: $("#resultadoBusca").offset().top
+		}, 3000);
+	});
+</script>

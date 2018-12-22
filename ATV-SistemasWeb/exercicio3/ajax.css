@@ -1,0 +1,16 @@
+
+footer p {
+	background-color: black;
+	color: white;
+	font-size: 22px;
+	text-align: center;
+}
+
+h3 div {
+	float: right;
+	display: inline-block;
+}
+
+button {
+	width: 60px;
+}
